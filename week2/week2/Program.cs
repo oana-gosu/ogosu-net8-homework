@@ -6,6 +6,7 @@ Console.WriteLine("Input second no:");
 int second = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input third no:");
 int third = Convert.ToInt32(Console.ReadLine());
+
 if (first <= second)
 {
     if (second <= third)
@@ -13,26 +14,36 @@ if (first <= second)
         Console.WriteLine("Minimum is " + first);
         Console.WriteLine("Maximum is " + third);
     }
-    else if (first <= third) 
+    else if (first <= third)
     {
         Console.WriteLine("Minimum is " + first);
+
         Console.WriteLine("Maximum is " + second);
     }
-        else 
-        {
+    else
+    {
         Console.WriteLine("Minimum is " + third);
         Console.WriteLine("Maximum is " + second);
-    };
+    }
+}
 
-else if (first <= third) 
+else
+{
+    if (second >= third)
+    {
+        Console.WriteLine("Minimum is " + third);
+        Console.WriteLine("Maximum is " + first);
+    }
+    else if (first <= third)
     {
         Console.WriteLine("Minimum is " + second);
-        Console.WriteLine("Maximum is " + third);
+        Console.WriteLine("maximum is " + third);
     }
-    else 
+    else
     {
         Console.WriteLine("Minimum is " + second);
         Console.WriteLine("maximum is " + first);
     }
 }
+
 
