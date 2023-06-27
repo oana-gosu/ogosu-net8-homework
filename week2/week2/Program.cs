@@ -183,3 +183,26 @@ if (Temp>=40)
     Console.WriteLine("Its Very Hot");
 }
 
+
+//Data Structures Exercise 1
+int[,] array = new int[4, 3]
+{
+    {23, 345, 567 },
+    {12,  56,  -12 },
+    {34,  -98, 65 },
+    {765, 543, 321 }
+};
+Console.WriteLine(array[1,1]);
+Console.WriteLine(array[2, 1]);
+
+//Exercise 2
+var nume = new List<string>(){ "Maria", "Elena", "Claudiu", "Vasile"};
+Console.WriteLine("Introduceti nume");
+var newName = Console.ReadLine();
+if (nume.Contains(newName) != true)
+{
+    nume.Add(newName);
+    Console.WriteLine(nume[0] + nume[1] + nume[2] + nume[3] + nume[4]);
+}
+
+//Exercise 3
