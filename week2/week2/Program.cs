@@ -1,6 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Exercise 1
 using System.Diagnostics.Metrics;
+using System.Reflection.Metadata.Ecma335;
+
+Console.WriteLine("If & Switch");
+Console.WriteLine("Ex1");
 
 Console.WriteLine("Input first no:");
 int first = Convert.ToInt32(Console.ReadLine());
@@ -49,6 +53,7 @@ else
 }
 
 //Exercise 2
+Console.WriteLine("Ex2");
 int max, min;
 max = (first > second && first > third) ?
                 first : (second > third) ? second : third;
@@ -59,6 +64,7 @@ min = (first < second && first < third) ?
 Console.WriteLine("minimum is " + min);
 
 // Exercise 3
+Console.WriteLine("Ex3");
 Console.WriteLine("Input no of days: ");
 int no = Convert.ToInt32(Console.ReadLine());
 int years = no / 365;
@@ -94,6 +100,7 @@ Console.WriteLine(months + "months");
 Console.WriteLine(days + "days");
 
 // Exercise 4
+Console.WriteLine( "Ex4");
 Console.WriteLine("Enter the Physics mark:");
 int Pm =  Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter the Chemistry mark:");
@@ -132,6 +139,7 @@ else
 }
 
 //Exercise 5
+Console.WriteLine("Ex5");
 Console.WriteLine("Input grade");
 var grade = Console.ReadLine();
 if (grade == "E") 
@@ -156,6 +164,7 @@ if (grade == "F")
 }
 
 //Exercise 6
+Console.WriteLine("Ex6");
 Console.WriteLine("Input Temp");
 int Temp = Convert.ToInt32(Console.ReadLine());
 if (Temp<0)
@@ -184,7 +193,10 @@ if (Temp>=40)
 }
 
 
-//Data Structures Exercise 1
+//Data Structures Exercise 2
+Console.WriteLine("Data Structures");
+Console.WriteLine("Ex2");
+
 int[,] array = new int[4, 3]
 {
     {23, 345, 567 },
@@ -195,7 +207,8 @@ int[,] array = new int[4, 3]
 Console.WriteLine(array[1,1]);
 Console.WriteLine(array[2, 1]);
 
-//Exercise 2
+//Exercise 3
+Console.WriteLine("Ex3");
 var nume = new List<string>(){ "Maria", "Elena", "Claudiu", "Vasile"};
 Console.WriteLine("Introduceti nume");
 var newName = Console.ReadLine();
@@ -205,4 +218,39 @@ if (nume.Contains(newName) != true)
     Console.WriteLine(nume[0] + nume[1] + nume[2] + nume[3] + nume[4]);
 }
 
-//Exercise 3
+//Exercise 4
+Console.WriteLine("Ex4");
+Stack<int> myStack = new Stack<int>();
+Console.WriteLine("Input first no: ");
+int a = Convert.ToInt32(Console.ReadLine());
+myStack.Push(a);
+Console.WriteLine("Input second no: ");
+int b = Convert.ToInt32(Console.ReadLine());
+myStack.Push(b);
+Console.WriteLine(a==30 || b==30 || (a+b) == 30);
+
+//Exercise 5
+
+Console.WriteLine("Ex5");
+Queue<int> newnumbers = new Queue<int>();
+Console.WriteLine("1st no:");
+newnumbers.Enqueue(Convert.ToInt32(Console.ReadLine()));
+Console.WriteLine("2nd no");
+newnumbers.Enqueue(Convert.ToInt32(Console.ReadLine()));
+Console.WriteLine("3rd no:");
+newnumbers.Enqueue(Convert.ToInt32(Console.ReadLine()));
+Console.WriteLine("4th no");
+newnumbers.Enqueue(Convert.ToInt32(Console.ReadLine()));
+Console.WriteLine("5th no");
+newnumbers.Enqueue(Convert.ToInt32(Console.ReadLine()));
+int v = newnumbers.Peek();
+if ((v >= 0) && (v % 3 == 0 || v % 7 == 0)) 
+{
+    Console.WriteLine("Same Peek");
+}
+else 
+{
+    newnumbers.Dequeue();
+    Console.WriteLine("New Peek" + newnumbers.Peek());
+
+}
